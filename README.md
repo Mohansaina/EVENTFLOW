@@ -36,7 +36,12 @@ Deploy your EventFlow landing page in seconds:
 1. **Windows users**: Double-click `deploy-to-vercel.bat`
 2. **Mac/Linux users**: Run `./deploy-to-vercel.sh` in your terminal
 
-Follow the prompts for either deployment option.
+### Auto-Enable GitHub Pages (Advanced):
+If you want to automatically enable GitHub Pages:
+1. **Windows users**: Double-click `auto-enable-pages.bat`
+2. **Mac/Linux users**: Run `./auto-enable-pages.sh` in your terminal
+
+Follow the prompts for any deployment option.
 
 ## Manual Setup Instructions
 
