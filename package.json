@@ -1,0 +1,19 @@
+{
+  "name": "eventflow-landing",
+  "version": "1.0.0",
+  "description": "EventFlow - Real-time event timer and coordination platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "event",
+    "timer",
+    "coordination",
+    "live-event",
+    "event-management"
+  ],
+  "author": "EventFlow Team",
+  "license": "MIT"
+}
