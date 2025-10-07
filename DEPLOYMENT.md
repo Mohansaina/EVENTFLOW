@@ -1,13 +1,29 @@
 # Deployment Guide for EventFlow Landing Page
 
-This guide will help you deploy your EventFlow landing page to make it live on the internet using Vercel.
+This guide will help you deploy your EventFlow landing page to make it live on the internet using GitHub Pages with automated deployment.
 
 ## Prerequisites
 
 1. A GitHub account
-2. A Vercel account (you can sign up with your GitHub account)
+2. Git installed on your computer
 
-## Step 1: Push Code to GitHub
+## Automated Deployment (Recommended)
+
+This project includes automated deployment scripts for your convenience:
+
+### Windows Users
+Run the `deploy.bat` file by double-clicking it or executing it in Command Prompt.
+
+### Mac/Linux Users
+Run the `deploy.sh` file in your terminal:
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+## Manual Deployment Steps
+
+### Step 1: Push Code to GitHub
 
 1. Create a new repository on GitHub (you can name it "eventflow-landing")
 2. Connect your local repository to the GitHub repository:
@@ -17,44 +33,55 @@ This guide will help you deploy your EventFlow landing page to make it live on t
    git push -u origin main
    ```
 
-## Step 2: Deploy to Vercel
+### Step 2: Enable GitHub Pages
 
-1. Go to [vercel.com](https://vercel.com) and sign up or log in
-2. Click "New Project"
-3. Import your GitHub repository ("eventflow-landing")
-4. Vercel will automatically detect this is a static site
-5. Click "Deploy"
-6. Wait for the deployment to complete
-7. Your site will be live at a URL like: `https://eventflow-landing.vercel.app`
+1. Go to your repository on GitHub
+2. Click on the "Settings" tab
+3. Scroll down to the "Pages" section
+4. Under "Source", select "GitHub Actions"
+5. Click "Save"
 
-## Vercel Configuration
+### Step 3: Trigger Deployment
 
-This project includes a `vercel.json` file that configures:
-- Static file serving for HTML, CSS, and JS files
-- Routing to ensure all paths serve the main index.html (for SPA-like behavior)
+1. Make a small change to trigger the GitHub Actions workflow
+2. Commit and push the change:
+   ```bash
+   git add .
+   git commit -m "Trigger deployment"
+   git push origin main
+   ```
+
+## GitHub Actions Workflow
+
+This project includes a GitHub Actions workflow that automatically deploys your site:
+- Located at `.github/workflows/deploy.yml`
+- Runs on every push to the `main` branch
+- Automatically publishes your site to GitHub Pages
 
 ## Custom Domain (Optional)
 
 After deployment, you can add a custom domain:
-1. In your Vercel dashboard, go to your project settings
-2. Navigate to the "Domains" section
-3. Add your custom domain
+1. In your GitHub repository, go to Settings
+2. Navigate to the "Pages" section
+3. Add your custom domain in the "Custom domain" field
 4. Follow the DNS configuration instructions
 
 ## Updating Your Site
 
 To update your site after making changes:
-1. Commit your changes locally:
+1. Run the automated deployment script (`deploy.bat` or `deploy.sh`)
+2. Or commit your changes manually:
    ```bash
    git add .
    git commit -m "Description of changes"
    git push origin main
    ```
-2. Vercel will automatically redeploy your site
+3. GitHub Actions will automatically redeploy your site
 
 ## Troubleshooting
 
 If you encounter issues:
 1. Ensure all files are properly committed and pushed to GitHub
-2. Check that the `vercel.json` file is in the root of your repository
-3. Make sure your GitHub repository is public (or configure Vercel access for private repos)
+2. Check that the GitHub Actions workflow ran successfully
+3. Make sure your GitHub repository is public
+4. Verify that GitHub Pages is enabled in your repository settings
