@@ -24,7 +24,21 @@ A modern, responsive landing page for EventFlow - a real-time event timer and co
 - Font Awesome for icons
 - Google Fonts (Poppins)
 
-## Setup Instructions
+## Quick Deployment
+
+Deploy your EventFlow landing page in seconds:
+
+### GitHub Pages Deployment:
+1. **Windows users**: Double-click `one-click-deploy.bat`
+2. **Mac/Linux users**: Run `./one-click-deploy.sh` in your terminal
+
+### Vercel Deployment:
+1. **Windows users**: Double-click `deploy-to-vercel.bat`
+2. **Mac/Linux users**: Run `./deploy-to-vercel.sh` in your terminal
+
+Follow the prompts for either deployment option.
+
+## Manual Setup Instructions
 
 1. Clone or download this repository
 2. Open `index.html` in your web browser
@@ -32,13 +46,17 @@ A modern, responsive landing page for EventFlow - a real-time event timer and co
 
 ## Deployment
 
-This project is configured for easy deployment to Vercel:
+This project is configured for easy deployment to both GitHub Pages and Vercel:
 
-1. Push the code to a GitHub repository
-2. Connect your GitHub repository to Vercel
-3. Deploy with the default settings
+### GitHub Pages:
+1. Run the one-click deployment script
+2. Enable GitHub Pages in your repository settings
+3. Your site will be live at `https://YOUR_USERNAME.github.io/EVENTFLOW/`
 
-The included `vercel.json` file ensures proper routing for single-page applications.
+### Vercel:
+1. Run the Vercel deployment script
+2. Follow the prompts to set up your Vercel account
+3. Your site will be live at the URL provided by Vercel
 
 ## Customization
 
