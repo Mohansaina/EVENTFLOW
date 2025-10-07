@@ -12,7 +12,6 @@ pids
 
 # Diagnostic reports
 *.lcov
-*.html
 .nyc_output
 
 # Build outputs
