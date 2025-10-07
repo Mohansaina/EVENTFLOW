@@ -96,6 +96,23 @@ This landing page works on all modern browsers:
 - Safari
 - Edge
 
+## Custom Domain Setup
+
+To use a custom domain with your EventFlow landing page:
+
+1. Edit the `CNAME` file in the project root and replace the content with your domain (e.g., `eventflow.yourdomain.com`)
+2. Configure DNS settings with your domain provider:
+   - For an apex domain (example.com), create A records pointing to:
+     * 185.199.108.153
+     * 185.199.109.153
+     * 185.199.110.153
+     * 185.199.111.153
+   - For a subdomain (www.example.com), create a CNAME record pointing to `username.github.io` (replace username with your GitHub username)
+3. After deployment, go to your repository settings on GitHub:
+   - Visit `https://github.com/username/repository/settings/pages`
+   - Verify your custom domain is shown there
+   - Optionally, enforce HTTPS
+
 ## License
 
 This is a demo landing page template. Feel free to use and modify for your own projects.
